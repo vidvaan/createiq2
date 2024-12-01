@@ -1,0 +1,183 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(to right, #343a40, #6c757d);
+    color: #f8f9fa;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+    font-weight: 600;
+    margin-right: 1rem;
+    color: #f8f9fa !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important; /* Golden hover effect */
+}
+
+/* Hero Section */
+header {
+    background: linear-gradient(to right, #007bff, #6610f2), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 6rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+header h1,
+header p {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Section Backgrounds */
+section {
+    padding: 4rem 1rem;
+}
+
+#about {
+    background: linear-gradient(to right, #ffffff, #f1f3f5);
+}
+
+#courses {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+#contact {
+    background: linear-gradient(to right, #343a40, #495057);
+    color: white;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(to top, #ffffff, #f8f9fa);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    max-height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+/* Section Headings */
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #6610f2;
+    margin: 0.5rem auto;
+}
+
+/* Contact Section */
+.address p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.address strong {
+    color: #ffc107;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #212529, #343a40);
+    color: #f8f9fa;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.25rem;
+    }
+
+    .card img {
+        max-height: 150px;
+    }
+
+    nav .nav-link {
+        margin-right: 0;
+    }
+}
